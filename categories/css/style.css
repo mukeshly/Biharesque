@@ -2603,4 +2603,11 @@ a.place__comments__reply i { display: inline-block; vertical-align: middle; marg
 	font-size: 0.85em;
   }
 
+  /* sub-menu-bracket */
+  .sub-menu-bracket {
+	color: #23d3d3; /* Turquoise */
+	font-weight: 500;
+	font-size: 0.8em;
+  }
+
 /*# sourceMappingURL=style.css.map */
