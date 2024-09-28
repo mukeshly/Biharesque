@@ -2671,4 +2671,10 @@ a.place__comments__reply i { display: inline-block; vertical-align: middle; marg
 	margin: 0;                /* Remove default margins */
   }
 
+  /* sub-menu-bracket */
+  .sub-menu-bracket {
+	color: #23d3d3; /* Turquoise */
+	font-weight: 500;
+	font-size: 0.8em;
+  }
 /*# sourceMappingURL=style.css.map */
