@@ -2610,4 +2610,13 @@ a.place__comments__reply i { display: inline-block; vertical-align: middle; marg
 	font-size: 0.8em;
   }
 
+  /*Styling Substack blog iframe to position at the center of the screen*/
+  .iframe-container {
+	display: flex;
+	justify-content: center; /* Horizontally centers the iframe */
+	align-items: center; /* Vertically aligns the iframe if needed */
+	padding-top: 150px;  /* Add padding above the iframe */
+	padding-bottom: 150px; /* Add padding below the iframe */
+  }
+
 /*# sourceMappingURL=style.css.map */
