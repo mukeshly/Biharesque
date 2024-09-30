@@ -2516,37 +2516,133 @@ a.place__comments__reply i { display: inline-block; vertical-align: middle; marg
 	}
   }
 
-      /* Flexbox to align items vertically and horizontally */
-	  .top-bar {
-		display: flex;
-		align-items: center; /* Vertical alignment */
-		justify-content: center; /* Horizontal centering for the text */
-		background-color: #f9f9f9;
-		color: #000;
-		padding: 10px;
-		position: relative; /* To position the close button */
-	  }
+       /* General top-bar styling */
+.top-bar {
+	display: flex;
+	align-items: center; /* Vertically center content */
+	justify-content: center; /* Horizontally center text */
+	background-color: #f9f9f9;
+	color: #000;
+	padding: 10px;
+	position: relative; /* To position the close button */
+	overflow: hidden;
+  }
   
-	  /* Adjust the text in the center */
-	  .top-bar p {
-		margin: 0; /* Remove margin to align properly */
-		flex: 1; /* Take available space */
-		text-align: center;
-	  }
+  /* Ensure text wraps and stays center-aligned */
+  .top-bar p {
+	margin: 0;
+	flex: 1;
+	text-align: center; /* Keep text centered horizontally */
+	word-break: break-word; /* Allow long text to wrap properly */
+	padding-right: 40px; /* Add padding to prevent overlap with close button */
+  }
   
-	  /* Close button styling */
-	  .close-btn {
-		position: absolute;
-		right: 20px;
-		top: 50%;
-		transform: translateY(-50%); /* Vertically center using transform */
-		color: #000;
-		font-size: 20px;
-		cursor: pointer;
-		background: none;
-		border: none;
-	  }
-
+  /* Close button styling */
+  .close-btn {
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	transform: translateY(-50%); /* Vertically center the close button */
+	color: #000;
+	font-size: 20px;
+	cursor: pointer;
+	background: none;
+	border: none;
+	z-index: 2; /* Ensure button stays clickable on mobile */
+  }
+  
+  /* Mobile-specific line break */
+  @media (max-width: 768px) {
+	/* Hide the separator on mobile */
+	.separator {
+	  display: none; /* Hide the separator (|) on mobile */
+	}
+  
+	/* Show the line break on mobile */
+	.mobile-line-break {
+	  display: block; /* Force a line break on mobile */
+	}
+  
+	.top-bar {
+	  padding: 10px 15px; /* Slightly adjust padding for mobile */
+	}
+  
+	.top-bar p {
+	  padding-right: 50px; /* Increase space for the close button on mobile */
+	}
+  
+	.close-btn {
+	  font-size: 24px; /* Slightly larger close button for mobile */
+	  right: 15px; /* Adjust right padding */
+	}
+  }
+  
+  /* Hide line break on web view */
+  @media (min-width: 769px) {
+	.mobile-line-break {
+	  display: none; /* Hide line break on larger screens */
+	}
+  }
+/*--------------------------------*/
+/* Position the Go Back link on the left */
+.go-back-link {
+	position: absolute;
+	left: 20px; /* Distance from the left edge */
+	top: 20%;
+	transform: translateY(-50%); /* Vertically center the Go Back link */
+	text-decoration: none;
+	color: #3498db;
+	font-size: 18px;
+	font-family: 'Jost-Book';
+	font-weight: 500;
+	display: flex;
+	align-items: center;
+  }
+  
+  .back-arrow {
+	margin-right: 5px;
+	font-size: 24px; /* Size of the back arrow */
+  }
+  
+  /* Center the Brands title */
+  .title {
+	font-family: Jost;
+	font-size: 28px;
+	font-weight: 500;
+	line-height: 1.61;
+	text-align: center;
+	position: relative;
+  }
+  
+  /* Border under title */
+  .title-border-bottom:after {
+	content: '';
+	position: absolute;
+	bottom: -15px;
+	height: 1px;
+	width: 80px;
+	background-color: #23d3d3;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+  }
+  
+  /* Ensure the container has relative positioning for absolute elements */
+  .container {
+	position: relative;
+	display: flex;
+	justify-content: center; /* Center the Brands title */
+	align-items: center; /* Vertically center content */
+	height: 80px; /* Adjust height as needed */
+  }
+  
+  /* Hide Go Back link on larger screens */
+  @media (min-width: 769px) {
+	.go-back-link {
+	  display: none;
+	}
+  }
+/*--------------------------------*/
 	  /*Styling external link button*/
 	  .external-link {
 		display: inline-flex;
@@ -2570,37 +2666,40 @@ a.place__comments__reply i { display: inline-block; vertical-align: middle; marg
 		color: #0056b3; /* Change color on hover */
 	  }
 
-	  /* Recommended Tag */
-.tag-recommended {
-	color: #ff69b4; /* Pink color */
-	font-weight: bold;
+ /* Recommended Tag */
+ .tag-featured {
+	color: #ffab00; /* Amber color */
+	font-weight:400;
 	padding: 5px 10px;
-	border: 2px solid #ff69b4; /* Pink border */
+	border: 1px solid #ffab00; /* Amber border */
 	border-radius: 5px;
-	text-transform: uppercase;
-	font-size: 0.9em;
+	text-transform: unset;
+	font-size: 0.85em;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
   
   /* Popular Tag */
   .tag-popular {
-	color: #32cd32; /* Green color */
-	font-weight: 600;
+	color: #00A9E0; /* Light blue color */
+	font-weight: 400;
 	padding: 5px 10px;
-	border: 2px solid #32cd32; /* Green border */
+	border: 1px solid #00A9E0; /* Light blue border */
 	border-radius: 5px;
-	text-transform: uppercase;
+	text-transform: unset;
 	font-size: 0.85em;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
   
   /* New Tag */
   .tag-new {
-	color: #87cefa; /* Light blue color */
-	font-weight: 500;
+	color: #28a745; /* Lime green color */
+	font-weight: 400;
 	padding: 5px 10px;
-	border: 2px solid #87cefa; /* Light blue border */
+	border: 1px solid #28a745; /* Lime green border */
 	border-radius: 5px;
-	text-transform: uppercase;
+	text-transform: ;
 	font-size: 0.85em;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
 
   /* sub-menu-bracket */
@@ -2619,4 +2718,10 @@ a.place__comments__reply i { display: inline-block; vertical-align: middle; marg
 	padding-bottom: 150px; /* Add padding below the iframe */
   }
 
+
+  .viewlink {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	
+  }
+ 
 /*# sourceMappingURL=style.css.map */

@@ -78,11 +78,17 @@
 	<!-- End Google Tag Manager (noscript) -->
 
 
-	 <!-- Fixed top bar -->
-	 <div class="top-bar" id="topBar">
-		<p><a target="_blank" href="https://en.wikipedia.org/wiki/List_of_Indian_states_and_union_territories_by_GDP_per_capita">Bihar GDP per capita - <span style="color: red;">Rs 60,337  </span>  | State rank in India - <span style="color: red;">33/33</span></a></p>
-		<button class="close-btn" onclick="dismissTopBar()">✕</button>
-	  </div>
+	<!-- Fixed top bar -->
+<div class="top-bar" id="topBar">
+	<p>
+	  <a target="_blank" href="https://en.wikipedia.org/wiki/List_of_Indian_states_and_union_territories_by_GDP_per_capita">
+		Bihar GDP per capita - <span style="color: red;">Rs 60,337</span> 
+		<span class="separator">|</span>
+		<br class="mobile-line-break" /> State rank in India - <span style="color: red;">33/33</span>
+	  </a>
+	</p>
+	<button class="close-btn" onclick="dismissTopBar()">✕</button>
+  </div>
 	<div id="wrapper">
 		<header id="header" class="site-header">
 		  <div class="container-fluid">
@@ -99,7 +105,14 @@
 									  <i class="las la-times la-24-black"></i>
 								  </a><!-- .popup__close -->
 								  <div class="popup__content">
-									  
+									 <!-- Add the logo inside the popup for mobile -->
+									 <div class="popup__logo">
+										<a title="Logo" href="../index.html" class="site__brand__logo"><img src="images/assets/logo.png" alt="Biharésque"></a>
+									 </div><!-- .popup__logo -->  
+
+									<div class="=popup__menu popup__box">
+										<a href="../index.html" title="Home">Home</a>
+									</div>
 									
 									  <div class="popup__menu popup__box">
 										  <ul class="menu-arrow">
@@ -120,9 +133,9 @@
 									  </div><!-- .popup__menu -->
 								  </div><!-- .popup__content -->
 								  <div class="popup__button popup__box">
-									  <a title="Add place" href="https://tally.so/r/wLYRBy" class="btn">
+									  <a title="Add Business" href="https://tally.so/r/wLYRBy" class="btn">
 										  <i class="la la-plus"></i>
-										  <span>Add place</span>
+										  <span>Add Business</span>
 									  </a>
 								  </div><!-- .popup__button -->
 							  </div><!-- .popup -->
@@ -137,6 +150,9 @@
 				  </div><!-- .col-md-6 -->
 				  <div class="col-xl-6 col-7">
 					  <div class="right-header align-right">
+						<div class="main-menu">
+							<a href="../index.html" title="Home">Home</a>
+						</div>
 						  <nav class="main-menu">
 							  <ul>
 								<li>
@@ -157,9 +173,9 @@
 					
 						  
 						  <div class="right-header__button btn">
-							  <a title="Add place" href="https://tally.so/r/wLYRBy">
+							  <a title="Add Business" href="https://tally.so/r/wLYRBy">
 								  <i class="las la-plus la-24-white"></i>
-								  <span>Add Listing</span>
+								  <span>Add Business</span>
 							  </a>
 						  </div><!-- .right-header__button -->
 					  </div><!-- .right-header -->
@@ -168,9 +184,15 @@
 		  </div><!-- .container-fluid -->
 	  </header><!-- .site-header -->
 
+
 		<main id="main" class="site-main">
 			<div class="container">
-				<h2 class="title title-border-bottom align-center offset-item">Brands</h2>
+				<div class="title-container">
+					<a href="javascript:history.back()" class="go-back-link">
+					  <span class="back-arrow">←</span> Go Back
+					</a>
+					<h2 class="title title-border-bottom align-center offset-item">Brands</h2>
+				  </div>
 			</div>
 			
 			<div class="archive-city layout-02">
@@ -197,10 +219,10 @@
 									<br>
 							            <div class="entry-bottom">
 											<div class="place-preview">  
-							                    <span class="tag-recommended">Recommended</span>
+							                    <span class="tag-featured">Featured</span>
 							                </div>
 											<a href="https://www.jhajistore.com" target="_blank" class="external-link">
-												<i class="las fa-external-link-alt"></i>
+												<span class="viewlink">View</span>
 											  </a>
 							            </div>
 							        </div>
@@ -224,10 +246,10 @@
 									<br>
 							            <div class="entry-bottom">
 											<div class="place-preview">  
-							                    <span class="tag-recommended">Recommended</span>
+							                    <span class="tag-featured">Featured</span>
 							                </div>
 											<a href="https://mithilanaturals.com" target="_blank" class="external-link">
-												<i class="las fa-external-link-alt"></i>
+												<span class="viewlink">View</span>
 											  </a>
 							            </div>
 							        </div>
@@ -254,7 +276,7 @@
 							                    <span class="tag-popular">Popular</span>
 							                </div>
 											<a href="https://imithila.com" target="_blank" class="external-link">
-												<i class="las fa-external-link-alt"></i>
+												<span class="viewlink">View</span>
 											  </a>
 							            </div>
 							        </div>
@@ -278,10 +300,10 @@
 									<br>
 							            <div class="entry-bottom">
 											<div class="place-preview">  
-							                    <span class="tag-popular">Popular</span>
+							                    <span class="tag-new">New</span>
 							                </div>
 											<a href="https://www.stepupify.com" target="_blank" class="external-link">
-												<i class="las fa-external-link-alt"></i>
+												<span class="viewlink">View</span>
 											  </a>
 							            </div>
 							        </div>
@@ -308,7 +330,7 @@
 							                    <span class="tag-popular">Popular</span>
 							                </div>
 											<a href="https://sattuz.in" target="_blank" class="external-link">
-												<i class="las fa-external-link-alt"></i>
+												<span class="viewlink">View</span>
 											  </a>
 							            </div>
 							        </div>
@@ -356,7 +378,7 @@
                                 <ul>
 									<li><a target="_blank" title="Blog" href="https://biharesque.substack.com">Blog</a></li>
                                     <li><a target="_blank" title="Newsletter" href="https://biharesque.substack.com">Subscribe Newsletter</a></li>
-									<li><a target="_blank" title="For business owners" href="https://tally.so/r/wLYRBy">Add Listing</a></li>
+									<li><a target="_blank" title="For business owners" href="https://tally.so/r/wLYRBy">Add Business</a></li>
 									<li><a target="_blank" title="For customers" href="https://tally.so/r/w887Wk">Request New Listing</a></li>
 									<li><a target="_blank" title="Feedback" href="#tally-open=3ED4rq&tally-emoji-text=👋&tally-emoji-animation=wave&tally-auto-close=0">Feedback</a></li>
                                    
