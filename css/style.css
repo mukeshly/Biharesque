@@ -1586,8 +1586,7 @@ a.place__comments__reply i { display: inline-block; vertical-align: middle; marg
 .featured-cities .slick-dots button:before { width: 8px; height: 8px; background-color: #d8d8d8; }
 .featured-cities .slick-dots .slick-active button:before { background-color: #23d3d3; }
 
-.title-border-bottom { font-family: Jost; font-size: 28px; font-weight: 500; line-height: 1.61; position: relative; margin-bottom: 55px; }
-.title-border-bottom:after { content: ''; position: absolute; bottom: -15px; height: 1px; width: 80px; background-color: #23d3d3; margin: 0 auto; left: 0; right: 0; }
+
 
 .title-while { color: #ffffff; opacity: 1; }
 
@@ -2717,6 +2716,15 @@ a.place__comments__reply i { display: inline-block; vertical-align: middle; marg
   }
 
 
+  /* Full-screen centered container */
+.centered-description-container {
+	display: flex;
+	justify-content: center;  /* Horizontally center */
+	align-items: center;      /* Vertically center */
+	min-height: 15vh;        /* Full height of the viewport */
+	text-align: center;       /* Align the text inside the paragraph */
+	padding: 0px;            /* Optional: Add some padding */
+  }
 
   /* sub-menu-bracket */
   .sub-menu-bracket {
@@ -2732,5 +2740,10 @@ a.place__comments__reply i { display: inline-block; vertical-align: middle; marg
 	
   }
   
+  .title-border-bottom { font-family: Jost; font-size: 28px; font-weight: 500; line-height: 1.61; position: relative; margin-bottom: 55px; }
+.title-border-bottom:after { content: ''; position: absolute; bottom: -15px; height: 1px; width: 80px; background-color: #23d3d3; margin: 0 auto; left: 0; right: 0; }
+.title-border-bottom.no-margin {
+	margin-bottom: 0; /* Override the margin-bottom */
+  }
 
 /*# sourceMappingURL=style.css.map */
